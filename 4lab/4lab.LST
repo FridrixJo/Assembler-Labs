@@ -1,0 +1,61 @@
+  ADDR B1 B2 B3 B4 thrass11.tmp                                     PAGE       1
+
+                    org $8000
+
+  8000 C6 EE        ldab #$ee    //
+  8002 CE 82 00     ldx  #$8200  //
+  8005 86 1F        ldaa #$1f    //
+  8007 18 CE 00 00  ldy  #0      //    (0)
+
+                   init
+  800B E7 00        stab 0,x     //
+  800D 08           inx          //    1
+  800E 4A           deca         //
+  800F 26 FA        bne init     //      A != 0 (    Z)
+
+  8011 CE 82 00     ldx  #$8200  //
+  8014 86 1F        ldaa #$1f    //
+
+  8016 FF 81 F0     stx  $81f0   //
+  8019 B7 81 F2     staa $81f2   //
+
+                   count
+  801C 86 01        ldaa #1      //    A  1
+  801E E6 00        ldab $0,x    //   B
+  8020 F7 81 FA     stab $81fa   //    ( B)
+  8023 C6 00        ldab #0      //   B
+  8025 CE 00 08     ldx  #8      //    X  8 (1 )
+
+                   bitcount
+  8028 B4 81 FA     anda $81fa   //  ""
+  802B 74 81 FA     lsr  $81fa   //
+  802E B7 81 FD     staa $81fd   //    A
+  8031 FB 81 FD     addb $81fd   //   B   ,   A
+  8034 86 01        ldaa #1      //    A  1
+  8036 09           dex          //    1
+  8037 26 EF        bne bitcount //       X != 0 (    Z)
+
+  8039 F7 84 00     stab $8400   //      B (    )
+  803C C6 08        ldab #8      //   8   B
+  803E F0 84 00     subb $8400   //
+
+  8041 18 3A        aby          // Y = Y + B
+
+  8043 FE 81 F0     ldx  $81f0   //
+  8046 B6 81 F2     ldaa $81f2   //      ()
+
+  8049 08           inx          //   1
+  804A 4A           deca         //      ()
+
+  804B FF 81 F0     stx  $81f0   //
+  804E B7 81 F2     staa $81f2   //        ()
+
+  8051 26 C9        bne count    //       A != 0 (    Z)
+
+  8053 3E           wai          //
+
+  Symbol Table 
+
+  BITCOUNT           8028
+  INIT               800B
+  COUNT              801C

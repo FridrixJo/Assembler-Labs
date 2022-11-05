@@ -1,0 +1,6 @@
+  ADDR B1 B2 B3 B4 thrass11.tmp                                     PAGE       1
+
+                    org $8000
+  8000 86 1A        ldaa #$1a
+  8002 89 EF        adca #$ef
+  8004 19           daa

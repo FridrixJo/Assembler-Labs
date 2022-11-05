@@ -1,0 +1,81 @@
+  ADDR B1 B2 B3 B4 D:\second\KProg Labs\1lab\2lab.asm               PAGE       1
+
+                    org  $7000
+  7000 B7 80 50     staa $8050
+  7003 BF 80 51     sts  $8051
+
+  7006 B9 80 00     adca $8000
+  7009 B7 80 19     staa $8019
+  700C 86 00        ldaa #0
+  700E 89 00        adca #0
+  7010 B7 80 18     staa $8018
+
+  7013 B6 80 19     ldaa $8019
+  7016 B9 80 01     adca $8001
+  7019 B7 80 19     staa $8019
+  701C B6 80 18     ldaa $8018
+  701F 89 00        adca #0
+  7021 B7 80 18     staa $8018
+
+  7024 B6 80 19     ldaa $8019
+  7027 B9 80 02     adca $8002
+  702A B7 80 19     staa $8019
+  702D B6 80 18     ldaa $8018
+  7030 89 00        adca #0
+  7032 B7 80 18     staa $8018
+
+  7035 B6 80 19     ldaa $8019
+  7038 B9 80 03     adca $8003
+  703B B7 80 19     staa $8019
+  703E B6 80 18     ldaa $8018
+  7041 89 00        adca #0
+  7043 B7 80 18     staa $8018
+
+  7046 B6 80 19     ldaa $8019
+  7049 B9 80 04     adca $8004
+  704C B7 80 19     staa $8019
+  704F B6 80 18     ldaa $8018
+  7052 89 00        adca #0
+  7054 B7 80 18     staa $8018
+
+  7057 B6 80 19     ldaa $8019
+  705A B9 80 05     adca $8005
+  705D B7 80 19     staa $8019
+  7060 B6 80 18     ldaa $8018
+  7063 89 00        adca #0
+  7065 B7 80 18     staa $8018
+
+  7068 B6 80 19     ldaa $8019
+  706B B9 80 06     adca $8006
+  706E B7 80 19     staa $8019
+  7071 B6 80 18     ldaa $8018
+  7074 89 00        adca #0
+  7076 B7 80 18     staa $8018
+
+  7079 B6 80 19     ldaa $8019
+  707C B9 80 07     adca $8007
+  707F B7 80 19     staa $8019
+  7082 B6 80 18     ldaa $8018
+  7085 89 00        adca #0
+  7087 B7 80 18     staa $8018
+
+  708A B6 80 19     ldaa $8019
+  708D B9 80 08     adca $8008
+  7090 B7 80 19     staa $8019
+  7093 B6 80 18     ldaa $8018
+  7096 89 00        adca #0
+  7098 B7 80 18     staa $8018
+  ADDR B1 B2 B3 B4 D:\second\KProg Labs\1lab\2lab.asm               PAGE       2
+
+
+  709B B6 80 50     ldaa $8050
+  709E BE 80 51     lds  $8051
+
+
+
+
+
+
+
+
+
